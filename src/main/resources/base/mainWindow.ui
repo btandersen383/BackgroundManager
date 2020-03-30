@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>598</width>
+    <height>357</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Background Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="rightMargin">
+       <number>3</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
+      <item>
+       <widget class="QComboBox" name="libChoice">
+        <property name="insertPolicy">
+         <enum>QComboBox::InsertAtTop</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToContents</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextWallpaperButton">
+        <property name="text">
+         <string>Next Wallpaper</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Rotate Interval (s):</string>
+        </property>
+        <property name="buddy">
+         <cstring>rotateInterval</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="rotateInterval">
+        <property name="minimum">
+         <number>20</number>
+        </property>
+        <property name="maximum">
+         <number>3600</number>
+        </property>
+        <property name="value">
+         <number>600</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="startRotate">
+        <property name="text">
+         <string>Start Rotation</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="addLibraryTab">
+       <attribute name="title">
+        <string>Add Library</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="1" column="0">
+         <widget class="QLineEdit" name="libraryNameText">
+          <property name="toolTip">
+           <string>Alphanumeric name, only letters and numbers allowed</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>LibraryName</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="addPathButton">
+          <property name="text">
+           <string>Add Path</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1" rowspan="4">
+         <widget class="QListWidget" name="addPathList"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QPushButton" name="removePathButton">
+          <property name="text">
+           <string>Remove Path</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QPushButton" name="addLibraryButton">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Add Library</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="viewLibrariesTab">
+       <attribute name="title">
+        <string>View Libraries</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="1" column="0">
+         <widget class="QPushButton" name="editLibraryButton">
+          <property name="text">
+           <string>Edit Library</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="deleteLibraryButton">
+          <property name="text">
+           <string>Delete Library</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="2">
+         <widget class="QListWidget" name="viewLibraryList"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="wallhavenScrapeTab">
+       <attribute name="title">
+        <string>Wallhaven</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="2" column="1" colspan="2">
+         <widget class="QLineEdit" name="wallhavenDownloadDirectoryText">
+          <property name="toolTip">
+           <string>Path to the download directory for scraped images</string>
+          </property>
+          <property name="placeholderText">
+           <string>~/snap/WallChanger/wallhaven</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1" colspan="2">
+         <widget class="QLineEdit" name="wallhavenApiKeyText">
+          <property name="toolTip">
+           <string>Your Wallhaven.cc api key</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Wallhaven API key:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Download Directory:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <widget class="QLineEdit" name="wallhavenSortTypeText">
+          <property name="toolTip">
+           <string>random, date_added, or top_list</string>
+          </property>
+          <property name="placeholderText">
+           <string>random</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="1" colspan="2">
+         <widget class="QLineEdit" name="wallhavenFilterText">
+          <property name="toolTip">
+           <string>Space separated list of the wallhaven categories</string>
+          </property>
+          <property name="placeholderText">
+           <string>sfw sketchy general</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="2">
+         <widget class="QPushButton" name="wallhavenSaveButton">
+          <property name="text">
+           <string>Save</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Sort Type:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Category Filter:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QRadioButton" name="startScrapingWallhaven">
+          <property name="text">
+           <string>Start Scraping</string>
+          </property>
+          <property name="autoExclusive">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="redditScrapeTab">
+       <attribute name="title">
+        <string>Reddit</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>This tab not implemented</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>598</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTest_menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Library"/>
+    <addaction name="actionSave_Libraries"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <addaction name="menuTest_menu"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <action name="actionLoad_Library">
+   <property name="text">
+    <string>Load Library</string>
+   </property>
+  </action>
+  <action name="actionSave_Libraries">
+   <property name="text">
+    <string>Save Libraries</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

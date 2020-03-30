@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Preferences</class>
+ <widget class="QWidget" name="Preferences">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>213</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Preferences</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="5" column="2">
+    <widget class="QPushButton" name="cancelButton">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="3">
+    <widget class="QRadioButton" name="startOnBoot">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Start on Boot</string>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="3">
+    <widget class="QPushButton" name="saveButton">
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Not enabled</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="defaultLibraryLabel">
+     <property name="text">
+      <string>Default Library</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QRadioButton" name="darkMode">
+     <property name="toolTip">
+      <string>Turn on dark mode</string>
+     </property>
+     <property name="text">
+      <string>Dark Mode</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QLineEdit" name="notEnabled">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="dragEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QRadioButton" name="minimizeOnClose">
+     <property name="text">
+      <string>Minimize on Close</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2">
+    <widget class="QSpinBox" name="rotateInterval">
+     <property name="minimum">
+      <number>20</number>
+     </property>
+     <property name="maximum">
+      <number>3600</number>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="librarySaveDirectoryLabel">
+     <property name="text">
+      <string>Library Save Directory</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="librarySaveDirectoryText">
+     <property name="placeholderText">
+      <string>~/snap/WallChanger</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QRadioButton" name="rotateOnStart">
+     <property name="toolTip">
+      <string>Determines the initial value of Start Rotation</string>
+     </property>
+     <property name="text">
+      <string>Rotate on Start</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QLineEdit" name="defaultLibraryText">
+     <property name="placeholderText">
+      <string>MyFavorites</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="rotateIntervalLabel">
+     <property name="text">
+      <string>Rotate Interval (s)</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
